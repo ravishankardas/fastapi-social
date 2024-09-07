@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #333;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+.profile {
+    text-align: center;
+    margin-top: 80px; /* Space for the fixed navbar */
+    padding: 20px;
+}
+
+.profile img {
+    border-radius: 60%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #ddd;
+}
+
+.profile h2 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.profile p {
+    color: #666;
+}
+
+
+.content {
+    max-width: 800px;
+    margin: 40px auto; /* Center horizontally */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text inside content */
+    /* Ensure the content div is centered vertically within its container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content h3 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #333;
+}
+
+.content p {
+    line-height: 1.6;
+    color: #555;
+}

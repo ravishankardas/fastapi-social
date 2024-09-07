@@ -1,0 +1,21 @@
+.back-button {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.pdf-container {
+    text-align: center;
+}
+/* Fullscreen iframe */
+iframe {
+    width: 100vw;   /* Full width of the viewport */
+    height: 100vh;  /* Full height of the viewport */
+    border: none;   /* Removes the border */
+    display: block; /* Removes any inline spacing */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
