@@ -4,27 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Media Webpage</title>
-    <link rel="stylesheet" href="/static/style.css"> <!-- Link to CSS file -->
+    <title>RSD</title>
+    <!-- <link rel="stylesheet" href="/static/style.css"> Link to CSS file -->
+     <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #333;
+    padding: 10px 20px;
+    position: fixed;
+    height: 40px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+.profile {
+    padding: 100px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.profile-img {
+    border-radius: 40%; /* Makes the image circular */
+    width: 150px; /* Adjust width to make the image larger */
+    height: 150px; /* Adjust height to match the width for a circular shape */
+    object-fit: cover; /* Ensures the image covers the circular area without distortion */
+    cursor: pointer; /* Changes cursor to indicate clickable */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+
+
+
+.content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.content h3 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #333;
+}
+
+.content p {
+    line-height: 1.6;
+    color: #555;
+}
+     </style>
 </head>
 <body>
     <!-- Navbar -->
     <div class="navbar">
-        <a href="#">Home</a>
-        <a href="#">Projects</a>
-        <a href="#" onclick="loadResume()">Resume</a>
-        <a href="#">Achievements</a>
+        <!-- <a href="#">Home</a> -->
+        <a href="#">Skills</a>
+        <a href="/projects">Projects</a>
+        <a href="/resume">Resume</a>
+        <a href="/acheivements">Achievements</a>
+        <a href="/contact">Contact</a>
     </div>
 
     <!-- User Profile -->
     <div class="profile">
-        <img src="/static/ravi.jpg" alt="Profile Picture">
+        <img src="/static/ravi.jpg" alt="Profile Picture" class="profile-img" onclick="openModal()">
         <h2>Ravi Shankar Das</h2>
-        <p>@ravishankardas</p>
+        <a href="https://github.com/ravishankardas" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">@ravishankardas</a>
     </div>
+    
+    
+
     <div class="content">
         <h3>Welcome!</h3>
-        <p>Hi, i am Ravi. Here, you can find information about my projects, achievements, and more. Feel free to explore and get in touch!</p>
+        <p>Hello! I'm Ravi, a passionate developer. Here, you'll find details about my projects, achievements, and the work I’m excited to share. Whether you're interested in my technical skills, ongoing ventures, or collaborations, feel free to explore! I'm always open to connecting and discussing new ideas, so don't hesitate to reach out!</p>
     </div>
     <script src="/static/script.js"></script>
     

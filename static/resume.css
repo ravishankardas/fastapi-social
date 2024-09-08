@@ -1,21 +1,64 @@
-.back-button {
-    margin: 20px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-.pdf-container {
-    text-align: center;
-}
-/* Fullscreen iframe */
-iframe {
-    width: 100vw;   /* Full width of the viewport */
-    height: 100vh;  /* Full height of the viewport */
-    border: none;   /* Removes the border */
-    display: block; /* Removes any inline spacing */
+/* Base styling for desktop screens */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    background-color: #f0f2f5;
+}
+
+.pdf-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.back-button {
+    text-decoration: none;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #575757;
+}
+
+iframe {
+    width: 80%;
+    height: 80vh;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    iframe {
+        width: 90%;
+        height: 70vh;
+    }
+
+    .back-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Additional styling for very small screens (mobile) */
+@media (max-width: 480px) {
+    iframe {
+        width: 95%;
+        height: 60vh;
+    }
+
+    .back-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
 }

@@ -31,11 +31,23 @@ async def get_home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 
-@app.get("/api/resume", response_class=HTMLResponse)
+@app.get("/resume", response_class=HTMLResponse)
 async def get_resume(request: Request):
     return templates.TemplateResponse("resume.html", {"request": request})
 
 
+@app.get("/projects", response_class=HTMLResponse)
+async def get_resume(request: Request):
+    return templates.TemplateResponse("projects.html", {"request": request})
+
+@app.get("/acheivements", response_class=HTMLResponse)
+async def get_resume(request: Request):
+    return templates.TemplateResponse("acheivements.html", {"request": request})
+
+
+@app.get("/contact", response_class=HTMLResponse)
+async def get_resume(request: Request):
+    return templates.TemplateResponse("contact.html", {"request": request})
 
 app.include_router(post.router)
 app.include_router(user.router)
