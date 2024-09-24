@@ -37,17 +37,22 @@ async def get_resume(request: Request):
 
 
 @app.get("/projects", response_class=HTMLResponse)
-async def get_resume(request: Request):
+async def get_projects(request: Request):
     return templates.TemplateResponse("projects.html", {"request": request})
 
 @app.get("/acheivements", response_class=HTMLResponse)
-async def get_resume(request: Request):
+async def get_acheivements(request: Request):
     return templates.TemplateResponse("acheivements.html", {"request": request})
 
 
 @app.get("/contact", response_class=HTMLResponse)
-async def get_resume(request: Request):
+async def get_contact(request: Request):
     return templates.TemplateResponse("contact.html", {"request": request})
+
+
+@app.get("/social", response_class=HTMLResponse)
+async def get_social(request: Request):
+    return templates.TemplateResponse("social.html", {"request": request})
 
 app.include_router(post.router)
 app.include_router(user.router)
