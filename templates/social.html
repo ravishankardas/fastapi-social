@@ -373,12 +373,14 @@
         document.getElementById("welcome_text").textContent = "Welcome to the social media app";
         document.getElementById("postForm").style.display = "none"; // Hide the post form
 
+
+        document.getElementById("postFormContentArea").innerHTML = "";
         // Reset the forms' fields
         document.getElementById("signin_email").value = ""; 
         document.getElementById("signin_password").value = ""; 
         document.getElementById("login_email").value = ""; 
         document.getElementById("login_password").value = ""; 
-
+        document.getElementById("postFormContentArea")
         // Show the login form
         document.getElementById("loginForm").style.display = "block"; // Ensure Log In form is shown
 
